@@ -4,7 +4,7 @@ import { dark, light } from "./GlobalTheme";
 import { useState } from "react";
 
 function App() {
-  const [darkmode, setDarkmode] = useState(false);
+  const [darkmode, setDarkmode] = useState(true);
   const GlobalStyle = createGlobalStyle`
   * {
     list-style: none;
@@ -16,13 +16,13 @@ function App() {
 
   body {
     user-select: none;
-     /* font-family: 'Gowun Dodum', sans-serif;
-  font-family: 'Mrs Saint Delafield', cursive;
-  font-family: 'Source Sans Pro', sans-serif; */
-  overflow-x: hidden;
-  font-family: "Gowun Dodum", sans-serif;
-  font-family: "Mrs Saint Delafield", cursive;
-  font-family: "Source Sans Pro", sans-serif;
+    /* font-family: 'Gowun Dodum', sans-serif;
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-family: 'Source Sans Pro', sans-serif; */
+    overflow-x: hidden;
+    font-family: "Gowun Dodum", sans-serif;
+    font-family: "Mrs Saint Delafield", cursive;
+    font-family: "Source Sans Pro", sans-serif;
     transition: 0.25s;
     font-size: 16px;
     background: ${(props) => props.theme.bgColor};
