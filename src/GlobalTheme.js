@@ -1,8 +1,9 @@
 export const light = {
   bgColor: "#f8f8ff",
-  textColor: "#black",
+  textColor: "black",
   toggleModeBtn: "#ececec",
   HoverToggleBtn: "#dddddd",
+  mirror: "green",
 };
 
 export const dark = {
@@ -10,4 +11,5 @@ export const dark = {
   textColor: "#f8f8ff",
   toggleModeBtn: "#333",
   HoverToggleBtn: "#575757",
+  mirror: "yellow",
 };

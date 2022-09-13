@@ -15,6 +15,7 @@ function App() {
   }
 
   body {
+    user-select: none;
      /* font-family: 'Gowun Dodum', sans-serif;
   font-family: 'Mrs Saint Delafield', cursive;
   font-family: 'Source Sans Pro', sans-serif; */
