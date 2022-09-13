@@ -1,43 +1,36 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import ToggleMode from "./components/ToggleMode";
-import Home from "./pages/Home";
-import Study from "./pages/Study";
-import { ThemeProvider } from "styled-components";
-import { useState } from "react";
+import Router from "./Router";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { dark, light } from "./GlobalTheme";
+import { useState } from "react";
 
-const GlobalStyle = createGlobalStyle`
+function App() {
+  const [darkmode, setDarkmode] = useState(false);
+  const GlobalStyle = createGlobalStyle`
   * {
     list-style: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: ${(props) => props.theme.textColor};
   }
 
   body {
+     /* font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-family: 'Source Sans Pro', sans-serif; */
+  overflow-x: hidden;
+  font-family: "Gowun Dodum", sans-serif;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-family: "Source Sans Pro", sans-serif;
+    transition: 0.25s;
+    font-size: 16px;
     background: ${(props) => props.theme.bgColor};
-    color: ${(props) => props.theme.textColor}
   }
 `;
-
-function App() {
-  const [darkmode, setDarkmode] = useState(false);
   return (
     <ThemeProvider theme={darkmode ? dark : light}>
-      <BrowserRouter>
-        <GlobalStyle />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/stack" element={<Home />} />
-          <Route path="/study" element={<Study />} />
-        </Routes>
-        <ToggleMode setDarkmode={setDarkmode} />
-        <Footer />
-      </BrowserRouter>
+      <GlobalStyle />
+      <Router darkmode={darkmode} setDarkmode={setDarkmode} />
     </ThemeProvider>
   );
 }

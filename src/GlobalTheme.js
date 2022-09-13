@@ -1,7 +1,7 @@
 export const light = {
-  bgColor: "#121212",
-  textColor: "#ffffff",
-  toggleModeBtn: "#ffffff",
+  bgColor: "#f8f8ff",
+  textColor: "#black",
+  toggleModeBtn: "#ececec",
   HoverToggleBtn: "#dddddd",
 };
 

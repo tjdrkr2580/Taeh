@@ -2,19 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import PageTransition from "../components/PageTransition";
 
-const HomeWrapper = styled.section`
+const DevelopWrapper = styled.section`
   width: 100vw;
   position: absolute;
   left: 50%;
   top: 50%;
 `;
 
-const Home = () => {
+const Develop = () => {
   return (
     <PageTransition>
-      <HomeWrapper>Home</HomeWrapper>
+      <DevelopWrapper>Develop</DevelopWrapper>
     </PageTransition>
   );
 };
 
-export default Home;
+export default Develop;

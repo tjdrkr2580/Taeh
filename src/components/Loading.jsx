@@ -1,9 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const LoadingWrapper = styled.section`
   width: 100vw;
   height: 100vh;
+`;
+
+const TextAnimation = keyframes`
 `;
 
 const Loading = () => {
