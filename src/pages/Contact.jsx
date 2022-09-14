@@ -40,6 +40,10 @@ const ContactWrapper = styled.section`
     .copyright {
       font-size: 1rem;
     }
+    span {
+      font-size: 1.4rem;
+      font-family: "Mrs Saint Delafield", cursive;
+    }
   }
 `;
 
@@ -56,7 +60,9 @@ const Contact = () => {
       <ContactWrapper>
         <div className="text-box">
           <h1>Kim Tae Hyun</h1>
-          <h1 className="copyright">© 2022. Mari</h1>
+          <h1 className="copyright">
+            © 2022. <span> Taeh</span>
+          </h1>
         </div>
         ㅡ
         <IconsWrapper>
@@ -97,7 +103,7 @@ const Contact = () => {
             </a>
           </li>
         </IconsWrapper>
-        .<br />.<br />.
+        .<br />.<br />
         <a
           href="mailto:tjdrkr2580@naver.com"
           target="_blank"

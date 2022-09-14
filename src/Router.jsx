@@ -22,7 +22,7 @@ const Router = ({ setDarkmode, darkmode }) => {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home darkmode={darkmode} />} />
             <Route path="/develop" element={<Develop />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

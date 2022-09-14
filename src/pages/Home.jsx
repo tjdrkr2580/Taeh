@@ -48,6 +48,7 @@ const Textwrapper = styled.section`
 
 const HomeWrapper = styled.section`
   width: 100vw;
+  height: 200vh;
   display: flex;
   flex-direction: column;
 `;
@@ -91,26 +92,52 @@ const ShiftCar = keyframes`
 
 const CarWrapper = styled.section`
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   bottom: -1.8%;
   width: auto;
   height: auto;
   animation: ${ShiftCar} 7.5s linear infinite;
 `;
 
-const Home = () => {
+const WHwrapper = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const StackBox = styled.section`
+  position: relative;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  p {
+    color: transparent;
+    -webkit-text-stroke: 2px ${(props) => props.theme.textColor};
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+  }
+`;
+
+const Home = ({ darkmode }) => {
   return (
     <PageTransition>
       <HomeWrapper>
-        <Introduction>
-          <div className="animation-box">
-            <img src={profile} alt="Profile" />
-            <Textwrapper>
-              <h1>움직이는 자동차를 마우스로</h1>
-              <h1>살포시 눌러보시겠어요?</h1>
-            </Textwrapper>
-          </div>
-        </Introduction>
+        <WHwrapper>
+          <Introduction>
+            <section className="animation-box">
+              <img src={profile} alt="Profile" />
+              <Textwrapper>
+                <h1>움직이는 자동차를 마우스로</h1>
+                <h1>살포시 눌러보시겠어요?</h1>
+              </Textwrapper>
+            </section>
+          </Introduction>
+        </WHwrapper>
+        <WHwrapper>
+          <StackBox></StackBox>
+        </WHwrapper>
         <CarWrapper>
           <FaCarSide size={64} />
         </CarWrapper>

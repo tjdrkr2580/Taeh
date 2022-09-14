@@ -3,13 +3,13 @@ export const light = {
   textColor: "black",
   toggleModeBtn: "#ececec",
   HoverToggleBtn: "#dddddd",
-  mirror: "green",
+  modal: "#f8f8ff",
 };
 
 export const dark = {
-  bgColor: "#000000",
+  bgColor: "#121212",
   textColor: "#f8f8ff",
   toggleModeBtn: "#333",
   HoverToggleBtn: "#575757",
-  mirror: "yellow",
+  modal: "#000000",
 };

@@ -13,7 +13,7 @@ const HeaderWrapper = styled.header`
   padding-top: 50px;
   align-items: center;
   justify-content: space-around;
-  z-index: 999;
+  z-index: 500;
   background-color: ${(props) => props.theme.bgColor};
   transition: 0.25s;
   h1 {
