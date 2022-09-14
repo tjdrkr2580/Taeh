@@ -1,15 +1,42 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import PageTransition from "../components/PageTransition";
-import { DiGithubFull } from "react-icons/di";
-import { SiKakao } from "react-icons/si";
-import { GrMedium } from "react-icons/gr";
+import { VscGithub } from "react-icons/vsc";
+import { RiKakaoTalkFill } from "react-icons/ri";
+import { AiFillMediumSquare } from "react-icons/ai";
+import { SiMinutemailer } from "react-icons/si";
+
+const textEffect = keyframes`
+  0% {
+    filter: blur(2rem);
+  }
+  100% {
+    filter: blur(0);
+  }
+`;
 
 const ContactWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: ${textEffect} 1.2s ease forwards;
+  .text-box {
+    width: 100%;
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 1.3rem;
+      font-family: "Gowun Dodum", sans-serif;
+    }
+  }
 `;
 
 const IconsWrapper = styled.ul`
@@ -17,19 +44,19 @@ const IconsWrapper = styled.ul`
   gap: 2rem;
   justify-content: center;
   align-items: center;
-
-  li {
-    cursor: pointer;
-  }
+  color: cyan;
 `;
 
 const Contact = () => {
   return (
     <PageTransition>
       <ContactWrapper>
-        <h1>
-          계속해서 앞으로 나아가는 개발자 <span>김태현</span>이 되겠습니다.
-        </h1>
+        <div className="text-box">
+          <h1>Mari</h1>
+          <h1>Kim Tae Hyun</h1>
+          <h1>Intec.</h1>
+        </div>
+        ㅡ
         <IconsWrapper>
           <li>
             <a
@@ -37,28 +64,36 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {<DiGithubFull size={64} />}
+              {<VscGithub size={36} />}
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/tjdrkr2580"
+              href="https://open.kakao.com/o/sfNWlNue"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {<SiKakao size={64} />}
+              {<RiKakaoTalkFill size={36} />}
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/tjdrkr2580"
+              href="https://kimmarigold.medium.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {<GrMedium size={36} />}
+              {<AiFillMediumSquare size={36} />}
             </a>
           </li>
         </IconsWrapper>
+        .<br />.<br />.
+        <a
+          href="mailto:tjdrkr2580@naver.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiMinutemailer size={36} />
+        </a>
       </ContactWrapper>
     </PageTransition>
   );

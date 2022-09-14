@@ -24,6 +24,12 @@ const HeaderWrapper = styled.header`
     display: flex;
     align-items: center;
     gap: 2rem;
+    li {
+      transition: 0.25s letter-spacing;
+      &:hover {
+        letter-spacing: 0.1rem;
+      }
+    }
   }
 `;
 

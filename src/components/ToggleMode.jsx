@@ -6,8 +6,8 @@ const ToggleWrapper = styled.section`
   bottom: 7%;
   right: 5%;
   cursor: pointer;
-  width: 75px;
-  height: 75px;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
   background: ${(props) => props.theme.toggleModeBtn};
   display: flex;
