@@ -5,6 +5,7 @@ import { VscGithub } from "react-icons/vsc";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { AiFillMediumSquare } from "react-icons/ai";
 import { SiMinutemailer } from "react-icons/si";
+import { BsInstagram } from "react-icons/bs";
 
 const textEffect = keyframes`
   0% {
@@ -27,7 +28,7 @@ const ContactWrapper = styled.section`
   animation: ${textEffect} 1.2s ease forwards;
   .text-box {
     width: 100%;
-    gap: 1.2rem;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +36,9 @@ const ContactWrapper = styled.section`
     h1 {
       font-size: 1.3rem;
       font-family: "Gowun Dodum", sans-serif;
+    }
+    .copyright {
+      font-size: 1rem;
     }
   }
 `;
@@ -44,7 +48,6 @@ const IconsWrapper = styled.ul`
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  color: cyan;
 `;
 
 const Contact = () => {
@@ -52,9 +55,8 @@ const Contact = () => {
     <PageTransition>
       <ContactWrapper>
         <div className="text-box">
-          <h1>Mari</h1>
           <h1>Kim Tae Hyun</h1>
-          <h1>Intec.</h1>
+          <h1 className="copyright">© 2022. Mari</h1>
         </div>
         ㅡ
         <IconsWrapper>
@@ -83,6 +85,15 @@ const Contact = () => {
               rel="noopener noreferrer"
             >
               {<AiFillMediumSquare size={36} />}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/only04_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {<BsInstagram size={32} />}
             </a>
           </li>
         </IconsWrapper>

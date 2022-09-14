@@ -23,7 +23,6 @@ const ToggleWrapper = styled.section`
 const ToggleMode = ({ setDarkmode, darkmode }) => {
   const onClickToggleBtn = () => {
     setDarkmode(!darkmode);
-    console.log(darkmode);
   };
   return (
     <ToggleWrapper onClick={onClickToggleBtn}>
