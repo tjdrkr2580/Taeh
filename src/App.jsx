@@ -2,6 +2,7 @@ import Router from "./Router";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { dark, light } from "./GlobalTheme";
 import { useState } from "react";
+import Snowfall from "react-snowfall";
 
 function App() {
   const [darkmode, setDarkmode] = useState(true);
@@ -31,6 +32,7 @@ function App() {
   return (
     <ThemeProvider theme={darkmode ? dark : light}>
       <GlobalStyle />
+      <Snowfall color={darkmode ? "#fff" : "#3c7c7c7"} snowflakeCount={35} />
       <Router darkmode={darkmode} setDarkmode={setDarkmode} />
     </ThemeProvider>
   );
