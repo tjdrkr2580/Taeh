@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import PageTransition from "../components/PageTransition";
 import { Link } from "react-scroll";
@@ -155,9 +155,11 @@ const Home = ({ darkmode }) => {
           )}
         </WHwrapper>
         <Link to="2" spy={true} smooth={true}>
-          <CarWrapper onClick={onClick}>
-            <FaCarSide size={64} />
-          </CarWrapper>
+          {visible ? (
+            <CarWrapper onClick={onClick}>
+              <FaCarSide size={64} />
+            </CarWrapper>
+          ) : null}
         </Link>
       </HomeWrapper>
     </PageTransition>

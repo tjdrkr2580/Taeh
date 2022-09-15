@@ -14,7 +14,7 @@ const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: space-around;
   z-index: 500;
-  background-color: ${(props) => props.theme.bgColor};
+  background-color: transparent;
   transition: 0.25s;
   h1 {
     font-size: 2.8rem;

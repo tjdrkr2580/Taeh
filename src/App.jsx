@@ -1,10 +1,11 @@
 import Router from "./Router";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { dark, light } from "./GlobalTheme";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Snowfall from "react-snowfall";
 import { useMediaQuery } from "react-responsive";
 import { useMemo } from "react";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   const [darkmode, setDarkmode] = useState(false);
@@ -18,6 +19,7 @@ function App() {
   }, []);
   const GlobalStyle = createGlobalStyle`
   * {
+    cursor: none;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -26,6 +28,7 @@ function App() {
   }
 
   body {
+    overflow: hidden;
     /* font-family: 'Gowun Dodum', sans-serif;
     font-family: 'Mrs Saint Delafield', cursive;
     font-family: 'Source Sans Pro', sans-serif; */
@@ -55,6 +58,7 @@ function App() {
   return (
     <ThemeProvider theme={darkmode ? dark : light}>
       <GlobalStyle />
+      <AnimatedCursor color="193, 11, 111" />
       <Snowfall
         color={darkmode ? "#fff" : "#b0b0b0"}
         snowflakeCount={50}

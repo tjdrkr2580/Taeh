@@ -6,7 +6,6 @@ const ToggleWrapper = styled.button`
   position: fixed;
   bottom: 5%;
   right: 5%;
-  cursor: pointer;
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 50%;
