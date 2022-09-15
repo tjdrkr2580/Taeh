@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import PageTransition from "../components/PageTransition";
 import Draggable from "react-draggable";
 import profile from "../assets/profile.jpg";
 import { FaCarSide } from "react-icons/fa";
+import { useRef } from "react";
+import OnTop from "../components/OnTop";
+import { stack } from "../stack";
 
 const IntroductionAnimation = keyframes`
   0% {
@@ -93,7 +96,7 @@ const ShiftCar = keyframes`
 const CarWrapper = styled.section`
   cursor: pointer;
   position: absolute;
-  bottom: -1.8%;
+  bottom: -2%;
   width: auto;
   height: auto;
   animation: ${ShiftCar} 7.5s linear infinite;
@@ -108,24 +111,37 @@ const WHwrapper = styled.div`
 const StackBox = styled.section`
   position: relative;
   left: 50%;
-  top: 25%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
+  width: 80vw;
   p {
     color: transparent;
-    -webkit-text-stroke: 2px ${(props) => props.theme.textColor};
+    -webkit-text-stroke: 0.5px ${(props) => props.theme.textColor};
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 3rem;
+    font-size: 5vw;
     letter-spacing: 0.15rem;
   }
 `;
 
 const Home = ({ darkmode }) => {
+  const scrollRef = useRef(null);
+  const homeRef = useRef(null);
+  const [showButton, setShowButton] = useState(false);
+
+  const onCarClick = () => {
+    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const onTopClick = () => {
+    //homeRef.current.scrollIntoView({ behavior: "smooth" });
+    console.log(window.scrollY);
+  };
+
   return (
     <PageTransition>
       <HomeWrapper>
         <WHwrapper>
-          <Introduction>
+          <Introduction ref={homeRef}>
             <section className="animation-box">
               <img src={profile} alt="Profile" />
               <Textwrapper>
@@ -135,11 +151,14 @@ const Home = ({ darkmode }) => {
             </section>
           </Introduction>
         </WHwrapper>
-        <WHwrapper>
-          <StackBox></StackBox>
+        <WHwrapper ref={scrollRef}>
+          <StackBox>
+            <p>{stack.map((a) => a + " ")}</p>
+          </StackBox>
+          <OnTop onClick={onTopClick} />
         </WHwrapper>
         <CarWrapper>
-          <FaCarSide size={64} />
+          <FaCarSide size={64} onClick={onCarClick} />
         </CarWrapper>
       </HomeWrapper>
     </PageTransition>

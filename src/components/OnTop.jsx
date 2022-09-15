@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { HiOutlineArrowUp } from "react-icons/hi";
 
-const ToggleWrapper = styled.button`
+const OnTopBtn = styled.button`
   border: none;
   position: fixed;
-  bottom: 7%;
-  right: 5%;
+  bottom: 5%;
+  left: 5%;
   cursor: pointer;
   width: 4.5rem;
   height: 4.5rem;
@@ -21,15 +22,12 @@ const ToggleWrapper = styled.button`
   }
 `;
 
-const ToggleMode = ({ setDarkmode, darkmode }) => {
-  const onClickToggleBtn = () => {
-    setDarkmode(!darkmode);
-  };
+const OnTop = () => {
   return (
-    <ToggleWrapper onClick={onClickToggleBtn}>
-      {darkmode ? "🌛" : "🌞"}
-    </ToggleWrapper>
+    <OnTopBtn>
+      <HiOutlineArrowUp size={24} />
+    </OnTopBtn>
   );
 };
 
-export default ToggleMode;
+export default OnTop;

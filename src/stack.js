@@ -1,0 +1,16 @@
+export const stack = [
+  "HTML",
+  "CSS",
+  "SCSS",
+  "JAVASCRIPT",
+  "REACT",
+  "REDUX",
+  "REACTROUTER",
+  "STYLELDCOMPONENTS",
+  "ANTDESIGN",
+  "TAILWINDCSS",
+  "OPENAPI",
+  "VSCODE",
+  "GIT",
+  "NOTION",
+];

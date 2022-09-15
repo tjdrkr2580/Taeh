@@ -1,7 +1,7 @@
 import Router from "./Router";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { dark, light } from "./GlobalTheme";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Snowfall from "react-snowfall";
 import { useMediaQuery } from "react-responsive";
 import { useMemo } from "react";
