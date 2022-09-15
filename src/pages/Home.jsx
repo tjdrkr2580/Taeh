@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import PageTransition from "../components/PageTransition";
 import { Link } from "react-scroll";
@@ -123,7 +123,13 @@ const StackBox = styled.section`
 `;
 
 const Home = ({ darkmode }) => {
-  const [showButton, setShowButton] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const onClick = () => {
+    setVisible(!visible);
+  };
+  const onTopClick = () => {
+    setVisible(!visible);
+  };
   return (
     <PageTransition>
       <HomeWrapper>
@@ -142,12 +148,14 @@ const Home = ({ darkmode }) => {
           <StackBox>
             <p>{stack.map((a) => a + " ")}</p>
           </StackBox>
-          <Link to="1" spy={true} smooth={true}>
-            <OnTop />
-          </Link>
+          {visible ? null : (
+            <Link to="1" spy={true} smooth={true} onClick={onTopClick}>
+              <OnTop />
+            </Link>
+          )}
         </WHwrapper>
         <Link to="2" spy={true} smooth={true}>
-          <CarWrapper>
+          <CarWrapper onClick={onClick}>
             <FaCarSide size={64} />
           </CarWrapper>
         </Link>

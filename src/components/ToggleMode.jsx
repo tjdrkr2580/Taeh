@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ToggleWrapper = styled.button`
   border: none;
   position: fixed;
-  bottom: 7%;
+  bottom: 5%;
   right: 5%;
   cursor: pointer;
   width: 4.5rem;
@@ -24,8 +24,6 @@ const ToggleWrapper = styled.button`
 const ToggleMode = ({ setDarkmode, darkmode }) => {
   const onClickToggleBtn = () => {
     setDarkmode(!darkmode);
-    console.log(window.document.body);
-    console.log(window.document.body.clientHeight);
   };
   return (
     <ToggleWrapper onClick={onClickToggleBtn}>
