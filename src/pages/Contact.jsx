@@ -6,6 +6,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { AiFillMediumSquare } from "react-icons/ai";
 import { SiMinutemailer } from "react-icons/si";
 import { BsInstagram } from "react-icons/bs";
+import { SiNotion } from "react-icons/si";
 
 const textEffect = keyframes`
   0% {
@@ -59,6 +60,7 @@ const Contact = () => {
     <PageTransition>
       <ContactWrapper>
         <div className="text-box">
+          <h1>자라나고 싶은 씨앗같은 개발자</h1>
           <h1>Kim Tae Hyun</h1>
           <h1 className="copyright">
             © 2022. <span> Taeh</span>
@@ -100,6 +102,15 @@ const Contact = () => {
               rel="noopener noreferrer"
             >
               {<BsInstagram size={32} />}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/only04_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {<SiNotion size={32} />}
             </a>
           </li>
         </IconsWrapper>

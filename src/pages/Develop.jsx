@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PageTransition from "../components/PageTransition";
+import Draggable from "react-draggable";
 
 const DevelopWrapper = styled.section`
   width: 100vw;

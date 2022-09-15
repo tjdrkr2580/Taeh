@@ -24,6 +24,8 @@ const ToggleWrapper = styled.button`
 const ToggleMode = ({ setDarkmode, darkmode }) => {
   const onClickToggleBtn = () => {
     setDarkmode(!darkmode);
+    console.log(window.document.body);
+    console.log(window.document.body.clientHeight);
   };
   return (
     <ToggleWrapper onClick={onClickToggleBtn}>

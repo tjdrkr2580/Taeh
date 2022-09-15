@@ -37,6 +37,9 @@ function App() {
     transition: 0.25s;
     font-size: 16px;
     background: ${(props) => props.theme.bgColor};
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 

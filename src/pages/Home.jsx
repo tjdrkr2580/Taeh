@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import PageTransition from "../components/PageTransition";
-import Draggable from "react-draggable";
+import { Link } from "react-scroll";
 import profile from "../assets/profile.jpg";
 import { FaCarSide } from "react-icons/fa";
-import { useRef } from "react";
 import OnTop from "../components/OnTop";
 import { stack } from "../stack";
 
@@ -124,24 +123,12 @@ const StackBox = styled.section`
 `;
 
 const Home = ({ darkmode }) => {
-  const scrollRef = useRef(null);
-  const homeRef = useRef(null);
   const [showButton, setShowButton] = useState(false);
-
-  const onCarClick = () => {
-    scrollRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const onTopClick = () => {
-    //homeRef.current.scrollIntoView({ behavior: "smooth" });
-    console.log(window.scrollY);
-  };
-
   return (
     <PageTransition>
       <HomeWrapper>
-        <WHwrapper>
-          <Introduction ref={homeRef}>
+        <WHwrapper id="1">
+          <Introduction spy={true} smooth={true}>
             <section className="animation-box">
               <img src={profile} alt="Profile" />
               <Textwrapper>
@@ -151,15 +138,19 @@ const Home = ({ darkmode }) => {
             </section>
           </Introduction>
         </WHwrapper>
-        <WHwrapper ref={scrollRef}>
+        <WHwrapper id="2">
           <StackBox>
             <p>{stack.map((a) => a + " ")}</p>
           </StackBox>
-          <OnTop onClick={onTopClick} />
+          <Link to="1" spy={true} smooth={true}>
+            <OnTop />
+          </Link>
         </WHwrapper>
-        <CarWrapper>
-          <FaCarSide size={64} onClick={onCarClick} />
-        </CarWrapper>
+        <Link to="2" spy={true} smooth={true}>
+          <CarWrapper>
+            <FaCarSide size={64} />
+          </CarWrapper>
+        </Link>
       </HomeWrapper>
     </PageTransition>
   );
