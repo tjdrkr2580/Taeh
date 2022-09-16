@@ -115,7 +115,7 @@ const StackBox = styled.section`
   width: 80vw;
   p {
     color: transparent;
-    -webkit-text-stroke: 0.5px ${(props) => props.theme.textColor};
+    -webkit-text-stroke: 1px ${(props) => props.theme.textColor};
     font-family: "Source Sans Pro", sans-serif;
     font-size: 5vw;
     letter-spacing: 0.15rem;
