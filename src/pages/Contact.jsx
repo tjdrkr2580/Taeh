@@ -106,7 +106,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/only04_/"
+              href="https://tjdrkr2580.notion.site/Kim-Tae-Hyun-4ce30c75290f450da94a7ac7590e8c78"
               target="_blank"
               rel="noopener noreferrer"
             >
