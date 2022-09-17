@@ -60,7 +60,7 @@ const Contact = () => {
     <PageTransition>
       <ContactWrapper>
         <div className="text-box">
-          <h1>야망이 있는 예비 개발자</h1>
+          <h1>큰 야망을 가지고 있는 예비 개발자</h1>
           <h1>Kim Tae Hyun</h1>
           <h1 className="copyright">
             © 2022. <span> Taeh</span>
