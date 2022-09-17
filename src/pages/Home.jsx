@@ -108,17 +108,33 @@ const WHwrapper = styled.div`
 `;
 
 const StackBox = styled.section`
-  position: relative;
-  left: 50%;
+  position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;
-  p {
+  text-align: center;
+  width: 70vw;
+  max-width: 1000px;
+  min-width: 700px;
+  span {
+    cursor: pointer;
     color: transparent;
-    -webkit-text-stroke: 1px ${(props) => props.theme.textColor};
+    -webkit-text-stroke: 0.9px ${(props) => props.theme.textColor};
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 5vw;
-    letter-spacing: 0.15rem;
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+    transition: 0.2s;
+    &:hover {
+      font-size: 4.5rem;
+      color: ${(props) => props.theme.textColor};
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 2rem;
+      &:hover {
+        font-size: 2.5rem;
+        color: ${(props) => props.theme.textColor};
+      }
+    }
   }
 `;
 
@@ -146,7 +162,9 @@ const Home = ({ darkmode }) => {
         </WHwrapper>
         <WHwrapper id="2">
           <StackBox>
-            <p>{stack.map((a) => a + " ")}</p>
+            {stack.map((a) => (
+              <span>{a + " "}</span>
+            ))}
           </StackBox>
           {visible ? null : (
             <Link to="1" spy={true} smooth={true} onClick={onTopClick}>
