@@ -35,7 +35,7 @@ export const Projects = [
   {
     id: 4,
     name: "mIIu",
-    desc: "좋아하는 아티스트의 웹 페이지?",
+    desc: "좋아하는 아티스트의 웹 페이지.",
     stack: ["React", "SCSS"],
     github: "https://github.com/tjdrkr2580/mIIu",
     notion:

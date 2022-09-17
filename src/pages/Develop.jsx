@@ -4,8 +4,9 @@ import PageTransition from "../components/PageTransition";
 import ProjectSlider from "../components/ProjectSlider";
 
 const DeveloperWrapper = styled.section`
-  margin-top: 12rem;
+  margin-top: 10rem;
   .introduce {
+    font-size: 1.2rem;
     font-family: "Gowun Dodum", sans-serif;
     text-align: center;
     margin-bottom: 2rem;
