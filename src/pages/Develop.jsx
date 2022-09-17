@@ -27,7 +27,10 @@ const Develop = () => {
     <PageTransition>
       <DevelopWrapper>
         <ProjectWrapper>
-          <li>Paint Canvas</li>
+          <li>
+            <h1>Paint Canvas</h1>
+            <p></p>
+          </li>
           <li>Wow Chat</li>
           <li>Example Portfolio</li>
           <li>mIIu</li>
