@@ -12,6 +12,7 @@ const onTopOpacity = keyframes`
 `;
 
 const OnTopBtn = styled.button`
+  cursor: pointer;
   border: none;
   position: fixed;
   bottom: 5%;

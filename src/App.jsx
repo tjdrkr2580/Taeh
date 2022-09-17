@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Snowfall from "react-snowfall";
 import { useMediaQuery } from "react-responsive";
 import { useMemo } from "react";
-import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   const [darkmode, setDarkmode] = useState(false);
@@ -19,7 +18,6 @@ function App() {
   }, []);
   const GlobalStyle = createGlobalStyle`
   * {
-    cursor: none;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -59,7 +57,6 @@ function App() {
   return (
     <ThemeProvider theme={darkmode ? dark : light}>
       <GlobalStyle />
-      <AnimatedCursor color="193, 11, 111" />
       <Snowfall
         color={darkmode ? "#fff" : "#b0b0b0"}
         snowflakeCount={50}

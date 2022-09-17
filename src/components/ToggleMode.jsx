@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ToggleWrapper = styled.button`
+  cursor: pointer;
   border: none;
   position: fixed;
   bottom: 5%;

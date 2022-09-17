@@ -12,6 +12,7 @@ const Tags = styled.ul`
   align-items: center;
   gap: 0.5rem;
   li {
+    cursor: pointer;
     color: white;
     width: auto;
     padding: 0 5px;
@@ -27,19 +28,20 @@ const Tags = styled.ul`
 
 const ProjectCard = styled.ul`
   .project-box {
+    cursor: move;
     img {
-      width: 450px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
     }
-    .canvas {
-      width: 350px;
-      height: 350px;
-    }
-    gap: 0.8rem;
+    gap: 0.9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    p {
+      font-family: "Gowun Dodum", sans-serif;
+      margin-bottom: 0.4rem;
+    }
   }
 `;
 
@@ -47,6 +49,7 @@ const Icons = styled.ul`
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  margin-top: 0.5rem;
 `;
 
 const ProjectSlider = () => {
@@ -63,11 +66,7 @@ const ProjectSlider = () => {
       {Projects.map((project) => (
         <ProjectCard key={project.id}>
           <section className="project-box">
-            <img
-              src={project.image}
-              alt={project.name}
-              className={project.id === 1 ? "canvas" : "default"}
-            />
+            <img src={project.image} alt={project.name} />
             <h1>{project.name}</h1>
             <p>{project.desc}</p>
             <Tags>

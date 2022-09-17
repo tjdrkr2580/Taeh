@@ -3,7 +3,6 @@ export const light = {
   textColor: "black",
   toggleModeBtn: "#ececec",
   HoverToggleBtn: "#dddddd",
-  modal: "#f8f8ff",
 };
 
 export const dark = {
@@ -11,5 +10,4 @@ export const dark = {
   textColor: "#f8f8ff",
   toggleModeBtn: "#333",
   HoverToggleBtn: "#575757",
-  modal: "#000000",
 };

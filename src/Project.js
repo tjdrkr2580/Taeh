@@ -2,7 +2,7 @@ export const Projects = [
   {
     id: 1,
     name: "Paint Canvas",
-    desc: "멋있는 화가가 되어보자",
+    desc: "당신도 멋있는 화가가 될 수 있어요.",
     stack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/tjdrkr2580/Paint-Canvas",
     notion:
@@ -13,7 +13,7 @@ export const Projects = [
   {
     id: 2,
     name: "Wow Chat",
-    desc: "잠깐동안 이야기하는 공간",
+    desc: "잠깐동안 멈춰서 이야기해보아요.",
     stack: ["React", "Node", "Socket.io"],
     github: "https://github.com/tjdrkr2580/WowChat",
     notion:
@@ -24,7 +24,7 @@ export const Projects = [
   {
     id: 3,
     name: "Example Portfolio",
-    desc: "Notion API로 만든 포트폴리오",
+    desc: "Notion API로 만든 포트폴리오.",
     stack: ["React", "Next", "Notion API", "TailWind CSS", "etc"],
     github: "https://github.com/tjdrkr2580/next-portfolio",
     notion:
@@ -35,7 +35,7 @@ export const Projects = [
   {
     id: 4,
     name: "mIIu",
-    desc: "좋아하는 아티스트 웹 페이지",
+    desc: "좋아하는 아티스트의 웹 페이지?",
     stack: ["React", "SCSS"],
     github: "https://github.com/tjdrkr2580/mIIu",
     notion:
@@ -46,7 +46,7 @@ export const Projects = [
   {
     id: 5,
     name: "Kim Tae Hyun OS",
-    desc: "OS같은 페이지!",
+    desc: "OS같은 웹 페이지!",
     stack: ["React", "SCSS"],
     github: "https://github.com/tjdrkr2580/kimtaehyun",
     notion:
@@ -79,7 +79,7 @@ export const Projects = [
   {
     id: 8,
     name: "Mari SNS",
-    desc: "당신만의 이야기를 공유해요",
+    desc: "당신만의 이야기를 모두에게 들려주세요.",
     stack: ["React", "Next", "Node"],
     github: "https://github.com/tjdrkr2580/next-social-community",
     notion:
