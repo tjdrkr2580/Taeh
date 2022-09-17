@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PageTransition from "../components/PageTransition";
 import Draggable from "react-draggable";
+import { Projects } from "../Project";
 
 const DevelopWrapper = styled.section`
   width: 100vw;
@@ -12,13 +13,19 @@ const ProjectWrapper = styled.ul`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   li {
-    font-family: "Gowun Dodum", sans-serif;
-    font-size: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 2.2rem;
+    }
+    span {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -27,17 +34,12 @@ const Develop = () => {
     <PageTransition>
       <DevelopWrapper>
         <ProjectWrapper>
-          <li>
-            <h1>Paint Canvas</h1>
-            <p></p>
-          </li>
-          <li>Wow Chat</li>
-          <li>Example Portfolio</li>
-          <li>mIIu</li>
-          <li>Kim Tae Hyun OS</li>
-          <li>CoinTracker</li>
-          <li>Mari SNS</li>
-          <li>Portfolio</li>
+          {Projects.map((project) => (
+            <li>
+              <h1>{project.name}</h1>
+              <span>{project.desc}</span>
+            </li>
+          ))}
         </ProjectWrapper>
       </DevelopWrapper>
     </PageTransition>
