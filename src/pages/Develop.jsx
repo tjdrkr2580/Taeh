@@ -1,7 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import PageTransition from "../components/PageTransition";
 import ProjectSlider from "../components/ProjectSlider";
+
+const textEffect = keyframes`
+  0% {
+    filter: blur(0.2rem);
+  }
+  100% {
+    filter: blur(0);
+  }
+`;
 
 const DeveloperWrapper = styled.section`
   margin-top: 10rem;
@@ -11,6 +20,7 @@ const DeveloperWrapper = styled.section`
     text-align: center;
     margin-bottom: 2rem;
   }
+  animation: ${textEffect} 0.5s ease-in-out forwards;
 `;
 
 const Develop = () => {

@@ -26,7 +26,7 @@ const ContactWrapper = styled.section`
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ${textEffect} 1.2s ease forwards;
+  animation: ${textEffect} 1.2s ease-in-out forwards;
   .text-box {
     width: 100%;
     gap: 1rem;
