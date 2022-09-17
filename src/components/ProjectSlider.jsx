@@ -49,7 +49,7 @@ const Icons = styled.ul`
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-top: 0.5rem;
+  margin: 1.25rem 0 1.3rem 0;
 `;
 
 const ProjectSlider = () => {
@@ -59,6 +59,7 @@ const ProjectSlider = () => {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 1,
+    dots: true,
     speed: 500,
   };
   return (

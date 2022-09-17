@@ -28,7 +28,9 @@ const Develop = () => {
     <PageTransition>
       <DeveloperWrapper>
         <h1 className="introduce">
-          옆으로 넘기시면 더 많은 정보를 확인하실 수 있습니다!
+          옆으로 넘기시면 더 많은 정보를
+          <br />
+          확인하실 수 있습니다!
         </h1>
         <ProjectSlider />
       </DeveloperWrapper>
