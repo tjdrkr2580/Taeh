@@ -1,47 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import PageTransition from "../components/PageTransition";
-import Draggable from "react-draggable";
-import { Projects } from "../Project";
+import ProjectSlider from "../components/ProjectSlider";
 
-const DevelopWrapper = styled.section`
-  width: 100vw;
-`;
-
-const ProjectWrapper = styled.ul`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-      font-size: 2.2rem;
-    }
-    span {
-      font-size: 1rem;
-    }
+const DeveloperWrapper = styled.section`
+  margin-top: 13rem;
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
   }
 `;
 
 const Develop = () => {
   return (
     <PageTransition>
-      <DevelopWrapper>
-        <ProjectWrapper>
-          {Projects.map((project) => (
-            <li>
-              <h1>{project.name}</h1>
-              <span>{project.desc}</span>
-            </li>
-          ))}
-        </ProjectWrapper>
-      </DevelopWrapper>
+      <DeveloperWrapper>
+        <h1>드래그 해라</h1>
+        <ProjectSlider />
+      </DeveloperWrapper>
     </PageTransition>
   );
 };

@@ -44,6 +44,7 @@ function App() {
       display: none;
     }
   }
+
 `;
 
   const style = useMemo(
