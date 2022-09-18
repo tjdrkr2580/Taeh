@@ -19,33 +19,33 @@
 - node_modules
     - react-router-dom
     - framer-motion
-		- react-responsive
-		- react-icons
-		- react-snowfall
-		- styled-components
-		- react-scroll
-		- react-slick
-		- slick-carousel
+    - react-responsive
+    - react-icons
+    - react-snowfall
+    - styled-components
+    - react-scroll
+    - react-slick
+    - slick-carousel
 - src
 - Pages
-			- Contact.jsx
-			- Develop.jsx
-			- Home.jsx
+	- Contact.jsx
+	- Develop.jsx
+	- Home.jsx
 - assets
-			- profile.jpg
+	- profile.jpg
 - components
-			- Header.jsx
-			- Loading.jsx
-			- OnTop.jsx
-			- PageTransition.jsx
-			- ProjectSlider.jsx
-			- ToggleMode.jsx
-		- App.jsx
-		- index.js
-		- Router.jsx
-		- stack.js
-		- GlobalTheme.js
-		- Project.js
+	- Header.jsx
+	- Loading.jsx
+	- OnTop.jsx
+	- PageTransition.jsx
+	- ProjectSlider.jsx
+	- ToggleMode.jsx
+- App.jsx
+- index.js
+- Router.jsx
+- stack.js
+- GlobalTheme.js
+- Project.js
 - .gitignore
 - package-lock.json
 - package.json
