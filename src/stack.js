@@ -8,6 +8,7 @@ export const stack = [
   "REACT-ROUTER",
   "STYLELD-COMPONENTS",
   "NODE",
+  "ANTD",
   "TAILWINDCSS",
   "OPENAPI",
   "VSCODE",
